@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_xianlu4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.miss.Xianlu4Activity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:text="交点数据：\n
+桩号,X坐标,Y坐标\n
+3628.633,4041133.369,495595.535\n
+前缓直点数据：\n
+桩号,X坐标,Y坐标\n
+2845.918,4040357.574,495491.689\n
+已知曲线要素：\n
+圆曲线半径,转角,桩距,缓和曲线长Ls1,缓和曲线长Ls2\n
+1100,32.38497,10,120,120\n
+边桩数据：\n
+左桩距,右桩距\n\n
+12.25,12.25\n
+点击下方的使用示例数据，会回到计算页面，点击计算就会自动填写数据进行计算
+"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/xianlu4_text" />
+
+    <Button
+        android:text="使用示例数据"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xianlu4_text"
+        android:layout_marginTop="20dp"
+        android:id="@+id/xianlu4_button" />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_xianlu3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.miss.Xianlu3Activity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:text="本程序能计算基本道路曲线的曲线要素和中桩及边桩的测设数据。通过缓和曲线长控制曲线类型，当Ls1=Ls2=0时，为圆曲线，当Ls1=Ls2=Ls时，是对称的缓和曲线，当Ls1 != Ls2时，为不对称的缓和曲线。通过前缓直里程和交点里程控制直线段的长度。最后能实现各种道路曲线类型的计算。使用过程中如遇到任何问题，可联系开发人员，QQ:1209001368"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/xianlu3_text" />
+</RelativeLayout>

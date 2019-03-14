@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -15,7 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DaoxianActivity"></activity>
+        <activity android:name=".DaoxianActivity" />
+        <activity android:name=".XianluActivity" />
+        <activity android:name=".Xianlu2Activity" />
+        <activity android:name=".Xianlu3Activity" />
+        <activity android:name=".Xianlu4Activity"></activity>
     </application>
 
 </manifest>
