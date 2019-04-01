@@ -3,8 +3,13 @@ package com.example.miss;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.miss.Daoxian.DaoxianActivity;
+import com.example.miss.Xianlu.XianluActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +19,16 @@ public class MainActivity extends AppCompatActivity {
     Button button_dadi;
     Button button_xianlu;
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main,menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.xianlu_item){
+            //在这里写入点击菜单事件
+        }
+        return true;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

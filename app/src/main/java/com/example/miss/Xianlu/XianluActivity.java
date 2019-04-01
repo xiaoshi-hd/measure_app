@@ -1,4 +1,4 @@
-package com.example.miss;
+package com.example.miss.Xianlu;
 
 import android.content.Intent;
 import android.support.annotation.IdRes;
@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.example.miss.R;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -125,11 +127,11 @@ public class XianluActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.xianlu_item){
-            Intent intent = new Intent(XianluActivity.this,Xianlu3Activity.class);
+            Intent intent = new Intent(XianluActivity.this,Xianlu_explainActivity.class);
             startActivity(intent);
         }
         else if (item.getItemId() == R.id.xianlu_item2){
-            Intent intent = new Intent(XianluActivity.this,Xianlu4Activity.class);
+            Intent intent = new Intent(XianluActivity.this,Xianlu_exampleActivity.class);
             startActivity(intent);
         }
         return true;
@@ -139,24 +141,10 @@ public class XianluActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.i("Activity生命周期","OnResume方法调用");
-        //region 测试数据2
-        /*mqhz_zhuanghao.setText(String.valueOf(155224.535));
-        mqhz_X.setText(String.valueOf(33670.847));
-        mqhz_Y.setText(String.valueOf(51097.981));
-        mjd_zhuanghao.setText(String.valueOf(155910.908));
-        mjd_X.setText(String.valueOf(34105.000));
-        mjd_Y.setText(String.valueOf(51629.600));
-        mzhuangju.setText(String.valueOf(10));
-        mbanjing.setText(String.valueOf(2000));
-        mzhuanjiao.setText(String.valueOf(30));
-        mLs1.setText(String.valueOf(300));
-        mLs2.setText(String.valueOf(300));
-        mzuo.setText(String.valueOf(12.25));
-        myou.setText(String.valueOf(12.25));*/
-        //endregion
-        if (Xianlu4Activity.example) {
+
+        if (Xianlu_exampleActivity.example) {
             //region 测试数据
-            mqhz_zhuanghao.setText(String.valueOf(2845.918));
+            /*mqhz_zhuanghao.setText(String.valueOf(2845.918));
             mqhz_X.setText(String.valueOf(4040357.574));
             mqhz_Y.setText(String.valueOf(495491.689));
             mjd_zhuanghao.setText(String.valueOf(3628.633));
@@ -168,7 +156,37 @@ public class XianluActivity extends AppCompatActivity {
             mLs1.setText(String.valueOf(120));
             mLs2.setText(String.valueOf(120));
             mzuo.setText(String.valueOf(12.25));
+            myou.setText(String.valueOf(12.25));*/
+            //endregion
+            //region 测试数据1
+            mqhz_zhuanghao.setText(String.valueOf(72057.074));
+            mqhz_X.setText(String.valueOf(24996.5767));
+            mqhz_Y.setText(String.valueOf(69553.7061));
+            mjd_zhuanghao.setText(String.valueOf(73078.9877));
+            mjd_X.setText(String.valueOf(25233.3799));
+            mjd_Y.setText(String.valueOf(68559.6076));
+            mzhuangju.setText(String.valueOf(10));
+            mbanjing.setText(String.valueOf(3504.4));
+            mzhuanjiao.setText(String.valueOf(30.0511));
+            mLs1.setText(String.valueOf(160));
+            mLs2.setText(String.valueOf(160));
+            mzuo.setText(String.valueOf(12.25));
             myou.setText(String.valueOf(12.25));
+            //endregion
+            //region 测试数据2
+            /*mqhz_zhuanghao.setText(String.valueOf(155224.535));
+            mqhz_X.setText(String.valueOf(33670.847));
+            mqhz_Y.setText(String.valueOf(51097.981));
+            mjd_zhuanghao.setText(String.valueOf(155910.908));
+            mjd_X.setText(String.valueOf(34105.000));
+            mjd_Y.setText(String.valueOf(51629.600));
+            mzhuangju.setText(String.valueOf(10));
+            mbanjing.setText(String.valueOf(2000));
+            mzhuanjiao.setText(String.valueOf(30));
+            mLs1.setText(String.valueOf(300));
+            mLs2.setText(String.valueOf(300));
+            mzuo.setText(String.valueOf(12.25));
+            myou.setText(String.valueOf(12.25));*/
             //endregion
         }
     }
@@ -176,7 +194,7 @@ public class XianluActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         Log.i("Activity生命周期","onStop方法调用");
-        Xianlu4Activity.example = false;
+        Xianlu_exampleActivity.example = false;
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -187,7 +205,7 @@ public class XianluActivity extends AppCompatActivity {
 
 
         Log.i("Activity生命周期","OnCreate方法调用");
-        //region 曲线转向选择
+        //region 曲线转向显示
         mradioGroup = (RadioGroup) findViewById(R.id.xianlu_rg1);
         mradioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
             @Override
@@ -196,10 +214,6 @@ public class XianluActivity extends AppCompatActivity {
                 Toast.makeText(XianluActivity.this,"你选择了" + mradioButton.getText(),Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
-
         //endregion
 
         mbutton = (Button) findViewById(R.id.xianlu_button);//为button设置监听事件
@@ -211,10 +225,13 @@ public class XianluActivity extends AppCompatActivity {
                 //region 转向选择
                 rd_you = (RadioButton) findViewById(R.id.xianlu_rd1);
                 rd_zuo = (RadioButton) findViewById(R.id.xianlu_rd2);
-                if (rd_zuo.isChecked()){//k默认是1，也就是右转
+                if (rd_zuo.isChecked()){
                     k = -1;
                 }
-                //Log.d("Activity生命周期",String.valueOf(k));
+                if (rd_you.isChecked()){
+                    k = 1;
+                }
+                Log.d("Activity生命周期",String.valueOf(k));
                 //endregion
 
                 //region 输入数据检查，不能为空字符
@@ -511,7 +528,7 @@ public class XianluActivity extends AppCompatActivity {
                 }
                 //endregion
 
-                Intent intent = new Intent(XianluActivity.this,Xianlu2Activity.class);
+                Intent intent = new Intent(XianluActivity.this,Xianlu_resultActivity.class);
                 startActivity(intent);
             }
         });

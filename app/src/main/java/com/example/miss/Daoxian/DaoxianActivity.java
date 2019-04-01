@@ -1,13 +1,15 @@
-package com.example.miss;
+package com.example.miss.Daoxian;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TextView;
 
-public class Xianlu3Activity extends AppCompatActivity {
+import com.example.miss.R;
+
+public class DaoxianActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_xianlu3);
+        setContentView(R.layout.activity_daoxian);
     }
 }
