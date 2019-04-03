@@ -15,11 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DaoxianActivity" />
-        <activity android:name=".XianluActivity" />
-        <activity android:name=".Xianlu2Activity" />
-        <activity android:name=".Xianlu3Activity" />
-        <activity android:name=".Xianlu4Activity"></activity>
+        <activity android:name=".Daoxian.DaoxianActivity" />
+        <activity android:name=".Xianlu.XianluActivity" />
+        <activity android:name=".Xianlu.Xianlu_resultActivity" />
+        <activity android:name=".Xianlu.Xianlu_explainActivity" />
+        <activity android:name=".Xianlu.Xianlu_exampleActivity" />
+        <activity android:name=".Dadi.DadiActivity" />
+        <activity android:name=".Shuizhun.ShuizhunActivity" />
+        <activity android:name=".Zuobiao.ZuobiaoActivity" />
+        <activity android:name=".Main_exampleActivity"></activity>
     </application>
 
 </manifest>
