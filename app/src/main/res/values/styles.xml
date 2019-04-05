@@ -1,11 +1,22 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <!--Toolbar颜色-->
         <item name="colorPrimary">@color/colorPrimary</item>
+        <!--状态栏颜色-->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--返回键样式-->
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorControlNormal">@color/colorBlue</item>
+        <item name="android:colorForeground">@android:color/white</item>
+
+        <item name="android:itemBackground">@color/colorWhite</item>
+
     </style>
 
     <style name="FullscreenTheme" parent="AppTheme">
@@ -20,4 +31,7 @@
         <item name="android:background">@color/black_overlay</item>
     </style>
 
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">              这是左边菜单栏图标的主题
+        <item name="color">@android:color/white</item>
+    </style>
 </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+            <!-- Customize your theme here. -->
+            <!--Toolbar颜色-->
+            <item name="colorPrimary">@color/colorPrimary</item>
+            <!--最顶部状态栏颜色-->
+            <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+            <!--返回键样式-->
+            <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+
+            <item name="colorAccent">@color/colorAccent</item>
+
+            <item name="colorControlNormal">@color/colorBlue</item>
+            <!--底部三键的背景颜色-->
+            <item name="android:navigationBarColor">@android:color/black</item>
+            <!--菜单背景颜色-->
+            <item name="android:itemBackground">@color/colorWhite</item>
+            <!--菜单文字颜色颜色-->
+            <item name="android:textColor">@color/colorBlack</item>
+        </style>
+</resources>
