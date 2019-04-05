@@ -8,11 +8,21 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+    <!--Toolbar-->
+    <include layout="@layout/activity_toolbar"
+        android:id="@+id/toolbar_xianlu" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:background="@color/colorGray1"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_below="@id/toolbar_xianlu">
         <RelativeLayout
             android:id="@+id/xianlu_rl0"
             android:layout_width="match_parent"
@@ -322,4 +332,5 @@
             android:textSize="25dp"
             android:background="@drawable/s_bt1"/>
         </RelativeLayout>
+    </RelativeLayout>
 </ScrollView>

@@ -1,19 +1,23 @@
 package com.example.miss.Xianlu;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.miss.Caculate;
 import com.example.miss.R;
 
 import java.math.BigDecimal;
@@ -29,6 +33,7 @@ public class XianluActivity extends AppCompatActivity {
     EditText mjd_zhuanghao,mjd_X,mjd_Y;
     EditText mzhuangju,mbanjing,mzhuanjiao,mLs1,mLs2;
     EditText mzuo,myou;
+    private Toolbar toolbar;
 
     double qhz_zhuanghao,qhz_X,qhz_Y;
     double jd_zhuanghao,jd_X,jd_Y;
@@ -201,8 +206,22 @@ public class XianluActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xianlu);
+        getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);//不让自动弹出软键盘
         findcontrol();
+        toolbar = (Toolbar)findViewById(R.id.toolbar_xianlu);
+        toolbar.setTitle("测量程序");//设置Toolbar标题
+        toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
+        setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//左侧添加一个默认的返回图标
+        getSupportActionBar().setHomeButtonEnabled(true); //设置返回键可用
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         Log.i("Activity生命周期","OnCreate方法调用");
         //region 曲线转向显示
@@ -244,7 +263,7 @@ public class XianluActivity extends AppCompatActivity {
                     jd_Y = Double.parseDouble(mjd_Y.getText().toString());
                     zhuangju = Double.parseDouble(mzhuangju.getText().toString());
                     banjing = Double.parseDouble(mbanjing.getText().toString());
-                    zhuanjiao = dmstohudu(Double.parseDouble(mzhuanjiao.getText().toString()));
+                    zhuanjiao = Caculate.dmstohudu(Double.parseDouble(mzhuanjiao.getText().toString()));
                     Ls1 = Double.parseDouble(mLs1.getText().toString());
                     Ls2 = Double.parseDouble(mLs2.getText().toString());
                     zuo = Double.parseDouble(mzuo.getText().toString());
@@ -320,7 +339,7 @@ public class XianluActivity extends AppCompatActivity {
                 }
                 //endregion
 
-                fangwei = fangweijiaojisuan(qhz_X,qhz_Y,jd_X,jd_Y);
+                fangwei = Caculate.fangweijiaojisuan(qhz_X,qhz_Y,jd_X,jd_Y);
 
                 //region 4等分复化辛普生公式计算曲线中桩坐标
                 //首先需要定义曲线段主点的曲率，通过曲率计算切线方位角，进而求出坐标
@@ -441,7 +460,7 @@ public class XianluActivity extends AppCompatActivity {
                         iY = YHY + H * (Math.sin(QT) + 4 * sinA + 2 * sinB + Math.sin(YHT)) / 6;
                         Xzuobiao.add(Round(iX, 3));
                         Yzuobiao.add(Round(iY, 3));
-                        XYH = Round(iX, 3);
+                        XYH = Caculate.Round(iX, 3);
                         YYH = Round(iY, 3);
                     }
                     //endregion
@@ -523,7 +542,7 @@ public class XianluActivity extends AppCompatActivity {
                         + String.format("%-20s", "左边桩X") + String.format("%-20s", "左边桩Y") + String.format("%-20s", "右边桩X") + String.format("%-20s", "右边桩Y") + "\n\n";
                 for (int i = 0; i < zhuanghao.size(); i++)
                 {
-                    str1 += String.format("%-20.3f", zhuanghao.get(i)) + String.format("%-25.3f", Xzuobiao.get(i)) + String.format("%-20.3f", Yzuobiao.get(i)) + String.format("%-20f", hudutodms(fangweijiao.get(i)));
+                    str1 += String.format("%-20.3f", zhuanghao.get(i)) + String.format("%-25.3f", Xzuobiao.get(i)) + String.format("%-20.3f", Yzuobiao.get(i)) + String.format("%-20f", Caculate.hudutodms(fangweijiao.get(i)));
                     str1 += String.format("%-20.3f", leftX.get(i)) + String.format("%-20.3f", leftY.get(i)) + String.format("%-20.3f", rightX.get(i)) + String.format("%-20.3f",rightY.get(i)) + "\n";
                 }
                 //endregion
