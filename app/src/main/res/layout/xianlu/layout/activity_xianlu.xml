@@ -23,7 +23,7 @@
         android:background="@color/colorGray1"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:layout_below="@id/toolbar_xianlu">
-        <RelativeLayout
+        <!--<RelativeLayout
             android:id="@+id/xianlu_rl0"
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -34,12 +34,12 @@
                 android:text="线路曲线计算程序"
                 android:layout_centerHorizontal="true"
                 android:textSize="30sp"/>
-            ></RelativeLayout>
+            ></RelativeLayout>-->
         <RelativeLayout
             android:id="@+id/xianlu_rl1"
             android:layout_width="230dp"
-            android:layout_height="120dp"
-            android:layout_below="@id/xianlu_rl0"
+            android:layout_height="132dp"
+
             android:padding="10dp">
             <TextView
                 android:id="@+id/xianlu_t0"
@@ -52,6 +52,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="桩号"
                 android:ems="10"
                 android:textSize="20sp"
@@ -68,6 +70,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="X坐标"
                 android:ems="10"
                 android:textSize="20sp"
@@ -83,6 +87,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="Y坐标"
                 android:ems="10"
                 android:textSize="20sp"
@@ -102,8 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:orientation="vertical"
-            android:layout_toRightOf="@+id/xianlu_rl1"
-            android:layout_below="@id/xianlu_rl0">
+            android:layout_toRightOf="@+id/xianlu_rl1">
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -120,6 +125,7 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:id="@+id/xianlu_rd1"
                     android:text="右转"
                     android:checked="true"
@@ -128,6 +134,7 @@
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:id="@+id/xianlu_rd2"
                     android:text="左转"
                     android:textSize="20sp"
@@ -137,7 +144,7 @@
         <RelativeLayout
             android:id="@+id/xianlu_rl2"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="175dp"
             android:padding="10dp"
             android:layout_below="@id/xianlu_rl1">
             <TextView
@@ -151,6 +158,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="桩号"
                 android:ems="10"
                 android:textSize="20sp"
@@ -166,6 +175,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="X坐标"
                 android:ems="10"
                 android:textSize="20sp"
@@ -183,6 +194,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="Y坐标"
                 android:ems="10"
                 android:textSize="20sp"
@@ -200,6 +213,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="桩距"
                 android:ems="10"
                 android:textSize="20sp"
@@ -215,6 +230,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="半径R"
                 android:ems="10"
                 android:textSize="20sp"
@@ -232,6 +249,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="转角d.ms"
                 android:ems="10"
                 android:textSize="20sp"
@@ -249,6 +268,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="Ls1"
                 android:ems="10"
                 android:textSize="20sp"
@@ -264,6 +285,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="Ls2"
                 android:ems="10"
                 android:textSize="20sp"
@@ -287,13 +310,15 @@
                 android:id="@+id/xianlu_t4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="边桩数据："
+                android:text="边桩数据"
                 android:textSize="20sp"/>
             <EditText
                 android:id="@+id/xianlu_ed_bz_zuo"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="左桩距"
                 android:ems="10"
                 android:textSize="20sp"
@@ -309,6 +334,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
                 android:hint="右桩距"
                 android:ems="10"
                 android:textSize="20sp"

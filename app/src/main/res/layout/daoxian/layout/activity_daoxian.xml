@@ -10,11 +10,5 @@
     <!--Toolbar-->
     <include layout="@layout/activity_toolbar"
         android:id="@+id/toolbar_daoxian" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="附和导线计算"
-        android:layout_centerHorizontal="true"
-        android:textSize="30sp"
-        android:layout_below="@+id/toolbar_daoxian"/>
+
 </RelativeLayout>

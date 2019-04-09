@@ -37,7 +37,7 @@ public class fangweijiaoActivity extends AppCompatActivity {
         editText_result = (EditText)findViewById(R.id.fangweijiao_result);
         editText_result.setFocusable(false);//设置结果不可编辑，但是能响应点击事件
 
-        toolbar.setTitle("测量程序");//设置Toolbar标题
+        toolbar.setTitle("方位角计算");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
 

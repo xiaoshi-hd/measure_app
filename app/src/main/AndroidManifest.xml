@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.miss">
+    package="com.example.miss" >
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/app"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Main_exampleActivity" />
+
         <activity android:name=".Daoxian.DaoxianActivity" />
+
         <activity android:name=".Xianlu.XianluActivity" />
         <activity android:name=".Xianlu.Xianlu_resultActivity" />
         <activity android:name=".Xianlu.Xianlu_explainActivity" />
         <activity android:name=".Xianlu.Xianlu_exampleActivity" />
+
         <activity android:name=".Dadi.DadiActivity" />
+        <activity android:name=".Dadi.Dadi_exampleActivity" />
+        <activity android:name=".Dadi.Dadi_explainActivity" />
+
         <activity android:name=".Shuizhun.ShuizhunActivity" />
+
         <activity android:name=".Zuobiao.ZuobiaoActivity" />
-        <activity android:name=".Main_exampleActivity"></activity>
+        <activity android:name=".Zuobiao.Zuobiao_exampleActivity" />
+        <activity android:name=".Zuobiao.Zuobiao_explainActivity" />
+
+        <activity android:name=".tools.dms_translateActivity" />
+        <activity android:name=".tools.fangweijiaoActivity" />
+        <activity android:name=".tools.zuobiaofanActivity" />
+        <activity android:name=".tools.zuobiaozhengActivity" >
+
+        </activity>
     </application>
 
 </manifest>

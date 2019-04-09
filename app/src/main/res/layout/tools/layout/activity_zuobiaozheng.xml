@@ -19,24 +19,23 @@
         android:background="@color/colorGray1"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:layout_below="@id/toolbar_zuobiaozheng">
-        <TextView
+        <!--<TextView
             android:id="@+id/zuobiaozheng_t0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="坐标正算"
             android:layout_centerHorizontal="true"
-            android:textSize="30sp" />
+            android:textSize="30sp" />-->
         <EditText
             android:id="@+id/zuobiaozheng_XA"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:hint="起点X坐标"
             android:ems="10"
             android:textSize="30sp"
             android:background="@drawable/edittext"
-            android:layout_below="@+id/zuobiaozheng_t0"
             android:layout_marginTop="20dp"
             android:inputType="number"
             android:digits="1234567890."
@@ -59,7 +58,6 @@
             android:digits="1234567890."
             android:singleLine="true"
             android:maxLines="1"
-            android:layout_below="@id/zuobiaozheng_t0"
             android:layout_toRightOf="@+id/zuobiaozheng_XA"
             />
         <EditText
@@ -67,7 +65,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:hint="方位角(d.ms)"
             android:ems="10"
             android:textSize="30sp"
@@ -103,9 +101,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="10dp"
             android:hint="终点X坐标"
             android:ems="10"
             android:textSize="30sp"
@@ -121,9 +119,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="10dp"
             android:hint="终点Y坐标"
             android:ems="10"
             android:textSize="30sp"

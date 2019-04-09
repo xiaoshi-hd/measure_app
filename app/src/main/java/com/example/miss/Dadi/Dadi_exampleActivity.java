@@ -1,32 +1,42 @@
-package com.example.miss.Xianlu;
+package com.example.miss.Dadi;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.miss.R;
 
-public class Xianlu_exampleActivity extends AppCompatActivity {
+public class Dadi_exampleActivity extends AppCompatActivity {
     private Toolbar toolbar;
-    public static boolean example;
+    public static boolean example_zheng = false,example_fan = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_xianlu_example);
-        Button button = (Button) findViewById(R.id.xianlu4_button);
-        button.setOnClickListener(new View.OnClickListener(){
+        setContentView(R.layout.activity_dadi_example);
+
+        Button button_zheng = (Button) findViewById(R.id.dadi_example_button_zheng);
+        button_zheng.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                example = true;
+                example_zheng = true;
                 finish();
             }
         });
-        //region 标题栏
-        toolbar = (Toolbar)findViewById(R.id.toolbar_xianlu_example);
-        toolbar.setTitle("线路曲线计算");//设置Toolbar标题
+        Button button_fan = (Button) findViewById(R.id.dadi_example_button_fan);
+        button_fan.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                example_fan = true;
+                finish();
+            }
+        });
+
+        //region 标题栏加返回箭头
+        toolbar = (Toolbar)findViewById(R.id.toolbar_dadi_example);
+        toolbar.setTitle("大地主题解算");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
 

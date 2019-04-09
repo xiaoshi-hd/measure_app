@@ -42,7 +42,7 @@ public class zuobiaofanActivity extends AppCompatActivity {
         //endregion
 
         //region 3.设置Toolbar控件
-        toolbar.setTitle("测量程序");//设置Toolbar标题
+        toolbar.setTitle("坐标反算");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
 
@@ -77,7 +77,7 @@ public class zuobiaofanActivity extends AppCompatActivity {
                 fangweijiao = Caculate.hudutodms(Caculate.fangweijiaojisuan(XA,YA,XB,YB));
                 editText_fangweijiao.setText(String.format("%f",fangweijiao));
                 juli = Caculate.julijisuan(XA,YA,XB,YB);
-                editText_juli.setText(String.valueOf(juli));
+                editText_juli.setText(String.format("%f",juli));//保留六位小数
                 //endregion
             }
         });

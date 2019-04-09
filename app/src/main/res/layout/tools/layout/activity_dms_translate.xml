@@ -19,28 +19,27 @@
         android:background="@color/colorGray1"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:layout_below="@id/toolbar_dms_translate">
-    <TextView
+    <!--<TextView
         android:id="@+id/dms_translate_t0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="度分秒转换"
         android:layout_centerHorizontal="true"
-        android:textSize="40sp" />
+        android:textSize="40sp" />-->
         <TextView
             android:id="@+id/dms_translate_t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="度分秒化弧度："
-            android:textSize="30sp"
-            android:layout_below="@id/dms_translate_t0"/>
+            android:textSize="30sp" />
         <EditText
             android:id="@+id/dms_translate_dms"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:hint="度.分秒"
             android:ems="10"
             android:textSize="30sp"
@@ -84,9 +83,9 @@
             android:id="@+id/dms_translate_t2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:text="度分秒化弧度："
+            android:text="弧度化度分秒："
             android:textSize="30sp"
             android:layout_below="@id/dms_translate_button0"/>
         <EditText
@@ -94,7 +93,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:hint="弧度"
             android:ems="10"
             android:textSize="30sp"

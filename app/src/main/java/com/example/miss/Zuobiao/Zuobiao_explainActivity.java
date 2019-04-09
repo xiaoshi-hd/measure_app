@@ -1,23 +1,22 @@
-package com.example.miss.Xianlu;
+package com.example.miss.Zuobiao;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.miss.R;
 
-public class Xianlu_explainActivity extends AppCompatActivity {
+public class Zuobiao_explainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_xianlu_explain);
-
-        //region 标题栏
-        toolbar = (Toolbar)findViewById(R.id.toolbar_xianlu_explain);
-        toolbar.setTitle("线路曲线计算");//设置Toolbar标题
+        setContentView(R.layout.activity_zuobiao_explain);
+        //region 标题栏加返回箭头
+        toolbar = (Toolbar)findViewById(R.id.toolbar_zuobiao_explain);
+        toolbar.setTitle("坐标转换");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
 

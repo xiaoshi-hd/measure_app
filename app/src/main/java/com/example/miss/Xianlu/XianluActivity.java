@@ -83,7 +83,6 @@ public class XianluActivity extends AppCompatActivity {
         leftY.clear();
         rightX.clear();
         rightY.clear();
-
     }
     private double dmstohudu(double dms){//度.分秒数据化为弧度
         double d,m,s;
@@ -209,7 +208,7 @@ public class XianluActivity extends AppCompatActivity {
         getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);//不让自动弹出软键盘
         findcontrol();
         toolbar = (Toolbar)findViewById(R.id.toolbar_xianlu);
-        toolbar.setTitle("测量程序");//设置Toolbar标题
+        toolbar.setTitle("线路曲线计算");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
 
@@ -230,7 +229,7 @@ public class XianluActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
                 mradioButton = (RadioButton) group.findViewById(checkedId);//checkedId表示被选择的那个CheckedButton
-                Toast.makeText(XianluActivity.this,"你选择了" + mradioButton.getText(),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(XianluActivity.this,"你选择了" + mradioButton.getText(),Toast.LENGTH_SHORT).show();
             }
         });
         //endregion

@@ -40,7 +40,7 @@ public class zuobiaozhengActivity extends AppCompatActivity {
         //endregion
 
         //region 3.设置Toolbar控件
-        toolbar.setTitle("测量程序");//设置Toolbar标题
+        toolbar.setTitle("坐标正算");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
 
@@ -75,7 +75,7 @@ public class zuobiaozhengActivity extends AppCompatActivity {
                 XB = XA + juli * Math.cos(Caculate.dmstohudu(fangweijiao));
                 editText_XB.setText(String.format("%f",XB));
                 YB = YA + juli * Math.sin(Caculate.dmstohudu(fangweijiao));
-                editText_YB.setText(String.valueOf(YB));
+                editText_YB.setText(String.format("%f",YB));
                 //endregion
             }
         });

@@ -1,21 +1,47 @@
 package com.example.miss.Daoxian;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
+import com.example.miss.Dadi.DadiActivity;
 import com.example.miss.R;
+import com.example.miss.Xianlu.Xianlu_exampleActivity;
+import com.example.miss.Xianlu.Xianlu_explainActivity;
 
 public class DaoxianActivity extends AppCompatActivity {
     private Toolbar toolbar;
+
+    //region 说明菜单
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.daoxian,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.daoxian_item1){
+            Intent intent = new Intent(DaoxianActivity.this,Xianlu_explainActivity.class);
+            startActivity(intent);
+        }
+        else if (item.getItemId() == R.id.daoxian_item2){
+            Intent intent = new Intent(DaoxianActivity.this,Xianlu_exampleActivity.class);
+            startActivity(intent);
+        }
+        return true;
+    }
+    //endregion
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daoxian);
         toolbar = (Toolbar)findViewById(R.id.toolbar_daoxian);
-        toolbar.setTitle("测量程序");//设置Toolbar标题
+        toolbar.setTitle("附和导线近似平差计算");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
 
