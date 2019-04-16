@@ -28,8 +28,6 @@ import com.example.miss.tools.zuobiaozhengActivity;
 
 import java.util.ArrayList;
 
-import static android.R.id.list;
-
 public class MainActivity extends AppCompatActivity {
 
     Button button_daoxian;//声明控件
@@ -52,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public boolean onOptionsItemSelected(MenuItem item) {//菜单选择事件
         if (item.getItemId() == R.id.main_item){
-            Intent intent = new Intent(MainActivity.this,Main_exampleActivity.class);
+            Intent intent = new Intent(MainActivity.this,Main_exaplainActivity.class);
             startActivity(intent);
         }
         return true;
@@ -81,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,zuobiaozhengActivity.class);
             startActivity(intent);
         }
-        else{
+        else if (position == 3){
             Toast.makeText(MainActivity.this, "你选择了坐标反算", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this,zuobiaofanActivity.class);
             startActivity(intent);

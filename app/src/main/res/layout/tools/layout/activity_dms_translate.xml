@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_dms_translate"
     android:layout_width="match_parent"
@@ -10,95 +10,94 @@
     <!--Toolbar-->
     <include layout="@layout/activity_toolbar"
         android:id="@+id/toolbar_dms_translate" />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="@color/colorGray1"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:layout_below="@id/toolbar_dms_translate">
-    <!--<TextView
-        android:id="@+id/dms_translate_t0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="度分秒转换"
-        android:layout_centerHorizontal="true"
-        android:textSize="40sp" />-->
+
         <TextView
             android:id="@+id/dms_translate_t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:text="度分秒化弧度："
-            android:textSize="30sp" />
-        <EditText
-            android:id="@+id/dms_translate_dms"
-            android:layout_width="150dp"
+            android:textSize="25sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:layout_marginLeft="10dp"
-            android:hint="度.分秒"
-            android:ems="10"
-            android:textSize="30sp"
-            android:background="@drawable/edittext"
-            android:layout_below="@+id/dms_translate_t1"
-            android:layout_marginTop="20dp"
-            android:inputType="number"
-            android:digits="1234567890."
-            android:singleLine="true"
-            android:maxLines="1"
-            />
-
-        <EditText
-            android:id="@+id/dms_translate_hudu_result"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:hint="弧度"
-            android:ems="10"
-            android:textSize="30sp"
-            android:background="@drawable/edittext"
-            android:inputType="number"
-            android:digits="1234567890."
-            android:singleLine="true"
-            android:maxLines="1"
-            android:layout_below="@id/dms_translate_t1"
-            android:layout_toRightOf="@+id/dms_translate_dms"
-            />
+            android:layout_marginRight="20dp">
+            <EditText
+                android:id="@+id/dms_translate_dms"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:hint="度.分秒"
+                android:ems="10"
+                android:textSize="25sp"
+                android:background="@drawable/edittext"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:singleLine="true"
+                android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/dms_translate_hudu_result"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:hint="弧度"
+                android:ems="10"
+                android:textSize="25sp"
+                android:background="@drawable/edittext"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:singleLine="true"
+                android:maxLines="1" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/dms_translate_button0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dms_translate_hudu_result"
             android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:text="计算"
             android:textSize="30dp"
             android:background="@drawable/s_bt1"/>
-        <TextView
-            android:id="@+id/dms_translate_t2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:text="弧度化度分秒："
-            android:textSize="30sp"
-            android:layout_below="@id/dms_translate_button0"/>
+    <TextView
+        android:id="@+id/dms_translate_t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="弧度化度分秒："
+        android:textSize="25sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
         <EditText
             android:id="@+id/dms_translate_hudu"
-            android:layout_width="150dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:layout_marginLeft="10dp"
             android:hint="弧度"
             android:ems="10"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:background="@drawable/edittext"
-            android:layout_below="@+id/dms_translate_t2"
             android:layout_marginTop="20dp"
             android:inputType="number"
             android:digits="1234567890."
@@ -108,30 +107,35 @@
 
         <EditText
             android:id="@+id/dms_translate_dms_result"
-            android:layout_width="150dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:hint="度.分秒"
             android:ems="10"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:background="@drawable/edittext"
             android:inputType="number"
             android:digits="1234567890."
             android:singleLine="true"
             android:maxLines="1"
-            android:layout_below="@id/dms_translate_t2"
-            android:layout_toRightOf="@+id/dms_translate_hudu"
             />
+
+    </LinearLayout>
+
         <Button
             android:id="@+id/dms_translate_button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dms_translate_dms_result"
             android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:text="计算"
             android:textSize="30dp"
             android:background="@drawable/s_bt1"/>
-        </RelativeLayout>
-</RelativeLayout>
+
+</LinearLayout>

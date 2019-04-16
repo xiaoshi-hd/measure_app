@@ -34,6 +34,7 @@ public class DadiActivity extends AppCompatActivity {
     private double a, b, c, f, e1, e2;//基本椭球参数
     private double B1,B2,L1,L2,A12,A21,S;//正反算要素变量
     //endregion
+
     //region 说明菜单
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -53,9 +54,6 @@ public class DadiActivity extends AppCompatActivity {
         return true;
     }
     //endregion
-    private void chushihua(){//初始化数据，方便调试
-        //每次运行需要清空数据
-    }
     protected void onResume() {
         super.onResume();
         //Log.i("Activity生命周期","OnResume方法调用");
@@ -107,7 +105,6 @@ public class DadiActivity extends AppCompatActivity {
             }
         });
         //endregion
-
         //region 找到控件
         rd_Krassovsky = (RadioButton) findViewById(R.id.dadi_Krassovsky);
         rd_ICGG_1975 = (RadioButton) findViewById(R.id.dadi_ICGG1975);
@@ -124,7 +121,6 @@ public class DadiActivity extends AppCompatActivity {
 
         button = (Button)findViewById(R.id.dadi_button);
         //endregion
-
         //region 正算反算选择
         radioGroup = (RadioGroup)findViewById(R.id.dadi_rg1);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
@@ -300,7 +296,6 @@ public class DadiActivity extends AppCompatActivity {
                     //endregion
                 }
                 //endregion
-
                 //region 反算
                 if (iszheng == false) {
                     //region 数据导入

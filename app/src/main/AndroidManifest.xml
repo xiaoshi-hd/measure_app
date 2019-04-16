@@ -15,9 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main_exampleActivity" />
+        <activity android:name=".Main_exaplainActivity" />
 
         <activity android:name=".Daoxian.DaoxianActivity" />
+        <activity android:name=".Daoxian.Daoxian_stationActivity" />
+        <activity android:name=".Daoxian.Daoxian_explainActivity" />
+        <activity android:name=".Daoxian.Daoxian_resultActivity" />
 
         <activity android:name=".Xianlu.XianluActivity" />
         <activity android:name=".Xianlu.Xianlu_resultActivity" />
@@ -29,6 +32,9 @@
         <activity android:name=".Dadi.Dadi_explainActivity" />
 
         <activity android:name=".Shuizhun.ShuizhunActivity" />
+        <activity android:name=".Shuizhun.Shuizhun_stationActivity" />
+        <activity android:name=".Shuizhun.Shuizhun_resultActivity" />
+        <activity android:name=".Shuizhun.Shuizhun_explainActivity" />
 
         <activity android:name=".Zuobiao.ZuobiaoActivity" />
         <activity android:name=".Zuobiao.Zuobiao_exampleActivity" />
@@ -37,9 +43,8 @@
         <activity android:name=".tools.dms_translateActivity" />
         <activity android:name=".tools.fangweijiaoActivity" />
         <activity android:name=".tools.zuobiaofanActivity" />
-        <activity android:name=".tools.zuobiaozhengActivity" >
+        <activity android:name=".tools.zuobiaozhengActivity" />
 
-        </activity>
     </application>
 
 </manifest>

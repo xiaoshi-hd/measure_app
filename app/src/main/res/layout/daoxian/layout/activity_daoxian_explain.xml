@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.miss.Daoxian.Daoxian_explainActivity">
+    <!--Toolbar-->
+    <include layout="@layout/activity_toolbar"
+        android:id="@+id/toolbar_daoxian_explain" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="\t\t\t\t本程序能实现附和导线的近似平差计算。
+\t\t\t\t用户在进入程序后需要输入已知起算数据，包括已知点坐标和已知边方位角。若已知数据是四个坐标，可以先用测量工具箱计算出方位角，再进行输入。之后对测量数据进行记录，包括测站，观测角，边长。程序默认第一站不测量边长。输入完成后，点击下一站即可把数据存储入数据库中，注意只有下拉列表出现数据，才表示数据存储成功，可以参与计算。如果输入错误可以点击重新测量。
+\t\t\t\t最后点击平差即可以生成计算报告，包括角度闭合差，坐标增量闭合差在内的限差信息，还有测站数，导线全长信息以及各点坐标和改正后的角度信息。角度计算精度为0.1”,坐标计算精度为0.001m。"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/toolbar_daoxian_explain"
+        android:id="@+id/daoxian_explain_text" />
+</RelativeLayout>

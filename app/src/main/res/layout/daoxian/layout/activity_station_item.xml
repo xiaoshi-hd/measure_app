@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/station_ceZhan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="测站"/>
+    <TextView
+        android:id="@+id/station_guanCeJ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="观测角"/>
+    <TextView
+        android:id="@+id/station_dis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="水平距离：" />
+    <View
+        android:id="@+id/station_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#3C8DC4"></View>
+</LinearLayout>
