@@ -5,14 +5,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
 
-import com.example.miss.Caculate;
-import com.example.miss.Daoxian.Starting_data;
 import com.example.miss.R;
+
+import java.util.ArrayList;
 
 public class Shuizhun_resultActivity extends AppCompatActivity {
     private Toolbar toolbar;
+    //存储距离
+    public static ArrayList<Double> juli = new ArrayList<>();
+    //存储高差
+    public static ArrayList<Double> gaocha = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shuizhun"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.miss.Shuizhun.ShuizhunActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Toolbar-->
+        <include layout="@layout/activity_toolbar"
+            android:id="@+id/toolbar_shuizhun_setup" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请输入基本信息，准备测量"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center">
+            <LinearLayout
+                android:id="@+id/shuizhun_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/shuizhun_dengji">
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shuizhun_4deng"
+                        android:text="    四等     "
+                        android:checked="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack" />
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shuizhun_2deng"
+                        android:layout_marginTop="9dp"
+                        android:text="    二等    "
+                        android:textSize="18sp"
+                        android:textColor="@color/colorBlack"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/shuizhun_ll">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="起点高程: "
+                        android:layout_marginTop="5dp"
+                        android:textSize="18sp"/>
+                    <EditText
+                        android:id="@+id/shuizhun_gaocheng_start"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="number"
+                        android:digits="1234567890.-"
+                        android:maxLines="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="m "
+                        android:textSize="18sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="终点高程: "
+                        android:textSize="18sp"/>
+                    <EditText
+                        android:id="@+id/shuizhun_gaocheng_end"
+                        android:layout_width="60sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="number"
+                        android:digits="1234567890.-"
+                        android:maxLines="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="m"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#3C8DC4"></View>
+
+
+        <Button
+            android:id="@+id/shuizhun_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:text="开始测量"
+            android:textSize="20dp"
+            android:background="@drawable/s_bt1"/>
+    </LinearLayout>
+</ScrollView>

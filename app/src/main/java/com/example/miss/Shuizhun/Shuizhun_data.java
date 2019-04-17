@@ -1,25 +1,18 @@
 package com.example.miss.Shuizhun;
-
+import org.litepal.crud.DataSupport;
 /**
  * Created by 赵朋小仙女 on 2019/4/14.
  */
 
-public class Shuizhun_data {
+public class Shuizhun_data extends DataSupport{
+//这里用到数据库存储每一测站的信息,不过始终也没用上
 
-    private int id;
+    private int id;//记录是每一站的id
     private String cezhan;
-    private int k1,k2;
-    private int hhs,hhz,hhx;//后黑上，中，下
-    private int qhs,qhz,qhx;//前黑上，中，下
-    private int hhongz,qhongz;//后红中，前红中
-
-    public String getCezhan() {
-        return cezhan;
-    }
-
-    public void setCezhan(String cezhan) {
-        this.cezhan = cezhan;
-    }
+    private double k1,k2;
+    private double hhs,hhz,hhx;//后黑上，中，下
+    private double qhs,qhz,qhx;//前黑上，中，下
+    private double hhongz,qhongz;//后红中，前红中
 
     public int getId() {
         return id;
@@ -29,84 +22,92 @@ public class Shuizhun_data {
         this.id = id;
     }
 
-    public int getK1() {
+    public String getCezhan() {
+        return cezhan;
+    }
+
+    public void setCezhan(String cezhan) {
+        this.cezhan = cezhan;
+    }
+
+    public double getK1() {
         return k1;
     }
 
-    public void setK1(int k1) {
+    public void setK1(double k1) {
         this.k1 = k1;
     }
 
-    public int getK2() {
+    public double getK2() {
         return k2;
     }
 
-    public void setK2(int k2) {
+    public void setK2(double k2) {
         this.k2 = k2;
     }
 
-    public int getHhs() {
+    public double getHhs() {
         return hhs;
     }
 
-    public void setHhs(int hhs) {
+    public void setHhs(double hhs) {
         this.hhs = hhs;
     }
 
-    public int getHhz() {
+    public double getHhz() {
         return hhz;
     }
 
-    public void setHhz(int hhz) {
+    public void setHhz(double hhz) {
         this.hhz = hhz;
     }
 
-    public int getHhx() {
+    public double getHhx() {
         return hhx;
     }
 
-    public void setHhx(int hhx) {
+    public void setHhx(double hhx) {
         this.hhx = hhx;
     }
 
-    public int getQhs() {
+    public double getQhs() {
         return qhs;
     }
 
-    public void setQhs(int qhs) {
+    public void setQhs(double qhs) {
         this.qhs = qhs;
     }
 
-    public int getQhz() {
+    public double getQhz() {
         return qhz;
     }
 
-    public void setQhz(int qhz) {
+    public void setQhz(double qhz) {
         this.qhz = qhz;
     }
 
-    public int getQhx() {
+    public double getQhx() {
         return qhx;
     }
 
-    public void setQhx(int qhx) {
+    public void setQhx(double qhx) {
         this.qhx = qhx;
     }
 
-    public int getHhongz() {
+    public double getHhongz() {
         return hhongz;
     }
 
-    public void setHhongz(int hhongz) {
+    public void setHhongz(double hhongz) {
         this.hhongz = hhongz;
     }
 
-    public int getQhongz() {
+    public double getQhongz() {
         return qhongz;
     }
-    public void setQhongz(int qhongz) {
+
+    public void setQhongz(double qhongz) {
         this.qhongz = qhongz;
     }
-
 
 }

@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.miss.Dadi.DadiActivity;
 import com.example.miss.Daoxian.DaoxianActivity;
 import com.example.miss.Shuizhun.ShuizhunActivity;
+import com.example.miss.Shuizhun.Shuizhun_setupActivity;
 import com.example.miss.Xianlu.XianluActivity;
 import com.example.miss.Zuobiao.ZuobiaoActivity;
 import com.example.miss.tools.dms_translateActivity;
@@ -162,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this,XianluActivity.class);
                     break;
                 case R.id.main_b_shuizhun:
-                    intent = new Intent(MainActivity.this, ShuizhunActivity.class);
+                    intent = new Intent(MainActivity.this, Shuizhun_setupActivity.class);
                     break;
                 case R.id.main_b_zuobiao:
                     intent = new Intent(MainActivity.this,ZuobiaoActivity.class);

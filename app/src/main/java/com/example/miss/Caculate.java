@@ -165,9 +165,13 @@ public class Caculate {
     // 导致结果偏向大数，使得误差产生积累进而产生系统误差，“奇进偶舍”使测量结果受到舍入误差的影响降到最低。
     public static double Round(double d, int i)//标准的四舍六入五留双函数
     {
+        int k = 1;
+        if (d <0){
+            d = Math.abs(d);
+            k = -1;
+        }
         double ratio = Math.pow(10, i);
         double num = d * ratio;
-        Log.d("Activity生命周期", String.valueOf(num));
         double mod = num % 1;
         //为了解决mod是double类型精度损失的情况，也就是第一种方法中的问题，用以下两行代码解决
         BigDecimal bg = new BigDecimal(mod);
@@ -175,8 +179,6 @@ public class Caculate {
 
         double integer = Math.floor(num);
         double returnNum;
-        Log.d("Activity生命周期", String.valueOf(mod));
-        Log.d("Activity生命周期", String.valueOf(integer));
         if(mod > 0.5){
             returnNum=(integer + 1) / ratio;
         }
@@ -186,8 +188,7 @@ public class Caculate {
         else{
             returnNum=(integer % 2 == 0 ? integer : integer + 1) / ratio;
         }
-        Log.d("Activity生命周期", String.valueOf(returnNum));
-        return returnNum;
+        return returnNum * k;
     }
     //endregion
     //region 生成指定长度字符串，不足位右补空格,不过实际情况跟format是一样的，没有用

@@ -28,23 +28,23 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16sp"
-            android:text="前视距："/>
+            android:text="后视距(m) "/>
         <TextView
-            android:id="@+id/shuizhun_qianshiju"
+            android:id="@+id/shuizhun_houshiju"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.5" />
+            android:layout_weight="1"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16sp"
-            android:text="后视距："/>
+            android:text="前视距(m) "/>
         <TextView
-            android:id="@+id/shuizhun_houshiju"
+            android:id="@+id/shuizhun_qianshiju"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1.5"/>
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -61,23 +61,23 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16sp"
-            android:text="当前视差："/>
+            android:text="当前视距(m)"/>
         <TextView
             android:id="@+id/shuizhun_shicha"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="0.8" />
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="16sp"
-            android:text="累积视差："/>
+            android:text="累积视距(m)"/>
         <TextView
             android:id="@+id/shuizhun_leijicha_result"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="0.8"/>
     </LinearLayout>
 
     <LinearLayout
@@ -92,32 +92,32 @@
             android:layout_marginTop="5dp"
             android:layout_weight="1">
             <TextView
-                android:id="@+id/t11"
+                android:id="@+id/shuizhun_hou_black_redm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="后黑红读数差"/>
+                android:text="后黑红差(mm)"/>
             <TextView
                 android:id="@+id/shuizhun_hou_black_red"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:layout_below="@id/t11"
+                android:layout_below="@id/shuizhun_hou_black_redm"
                 android:hint="0.0"/>
             <TextView
-                android:id="@+id/t13"
+                android:id="@+id/shuizhun_black_gaocham"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/shuizhun_hou_black_red"
                 android:layout_marginTop="5dp"
                 android:textSize="16sp"
-                android:text="黑面高差"/>
+                android:text="黑面高差(m)"/>
             <TextView
                 android:id="@+id/shuizhun_black_gaocha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:layout_below="@id/t13"
+                android:layout_below="@id/shuizhun_black_gaocham"
                 android:hint="0.0"/>
 
         </RelativeLayout>
@@ -126,33 +126,33 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
             <TextView
-                android:id="@+id/t21"
+                android:id="@+id/shuizhun_qian_black_redm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textSize="16sp"
-                android:text="前黑红读数差"/>
+                android:text="前黑红差(mm)"/>
             <TextView
                 android:id="@+id/shuizhun_qian_black_red"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:layout_below="@id/t21"
+                android:layout_below="@id/shuizhun_qian_black_redm"
                 android:hint="0.0"/>
             <TextView
-                android:id="@+id/t23"
+                android:id="@+id/shuizhun_red_gaocham"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_below="@id/shuizhun_qian_black_red"
                 android:textSize="16sp"
-                android:text="红面高差"/>
+                android:text="红面高差(m)"/>
             <TextView
                 android:id="@+id/shuizhun_red_gaocha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:layout_below="@id/t23"
+                android:layout_below="@id/shuizhun_red_gaocham"
                 android:hint="0.0"/>
         </RelativeLayout>
         <RelativeLayout
@@ -165,7 +165,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="高差之差"/>
+                android:text="后减前(mm)"/>
             <TextView
                 android:id="@+id/shuizhun_gaocha1"
                 android:layout_width="wrap_content"
@@ -174,19 +174,19 @@
                 android:layout_below="@id/t31"
                 android:hint="0.0"/>
             <TextView
-                android:id="@+id/t33"
+                android:id="@+id/shuizhun_gaocha2m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_below="@id/shuizhun_gaocha1"
                 android:textSize="16sp"
-                android:text="高差之差"/>
+                android:text="黑减红(mm)"/>
             <TextView
                 android:id="@+id/shuizhun_gaocha2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:layout_below="@id/t33"
+                android:layout_below="@id/shuizhun_gaocha2m"
                 android:hint="0.0"/>
         </RelativeLayout>
 

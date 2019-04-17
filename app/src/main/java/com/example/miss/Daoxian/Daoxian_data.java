@@ -1,8 +1,5 @@
 package com.example.miss.Daoxian;
 
-import android.util.Log;
-import android.widget.Toast;
-
 import com.example.miss.Caculate;
 
 import java.util.ArrayList;
@@ -11,7 +8,8 @@ import java.util.ArrayList;
  * Created by Administrator on 2017/5/11.
  */
 
-public class Starting_data {
+public class Daoxian_data {
+//这里并没有用到数据库，使用的是静态变量和列表存储信息，起到数据库的作用，但是列表数据的清空比较头疼
 
     //记录转向信息和闭合差
     public static int k;
@@ -27,8 +25,8 @@ public class Starting_data {
     public static double fangwei_first;
     public static double fangwei_end;
     //分别为起始点和结束点的坐标
-    public static Starting_data.ZuoBiao B;
-    public static Starting_data.ZuoBiao C;
+    public static Daoxian_data.ZuoBiao B;
+    public static Daoxian_data.ZuoBiao C;
 
     //存储点号信息
     public static ArrayList<String> ceZhan = new ArrayList<>();
@@ -63,6 +61,8 @@ public class Starting_data {
             this.y=y;
         }
     }
+
+    //region 导线平差的代码部分
     public static void jisuan(){
 
         warn_jiao = false;
@@ -166,5 +166,6 @@ public class Starting_data {
         //resultList.add(C);
         //endregion
     }
+    //endregion
 }
 

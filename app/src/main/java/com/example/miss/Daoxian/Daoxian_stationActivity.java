@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -86,13 +85,13 @@ public class Daoxian_stationActivity extends AppCompatActivity {
                 try{
                     stationList.remove(stationList.size() - 1);
                     adapter.notifyDataSetChanged();//刷新adapter
-                    //Log.d("Activity生命周期", String.valueOf(Starting_data.guanCeJList.get(Starting_data.guanCeJList.size() - 1)));
-                    Starting_data.guanCeJList.remove(Starting_data.guanCeJList.size() - 1);
-                    //Log.d("Activity生命周期", String.valueOf(Starting_data.guanCeJList.get(Starting_data.guanCeJList.size() - 1)));
-                    if(Starting_data.guanCeJList.size()!=0) {
-                        Starting_data.disList.remove(Starting_data.disList.size() - 1);
+                    //Log.d("Activity生命周期", String.valueOf(Daoxian_data.guanCeJList.get(Daoxian_data.guanCeJList.size() - 1)));
+                    Daoxian_data.guanCeJList.remove(Daoxian_data.guanCeJList.size() - 1);
+                    //Log.d("Activity生命周期", String.valueOf(Daoxian_data.guanCeJList.get(Daoxian_data.guanCeJList.size() - 1)));
+                    if(Daoxian_data.guanCeJList.size()!=0) {
+                        Daoxian_data.disList.remove(Daoxian_data.disList.size() - 1);
                     }
-                    if(Starting_data.guanCeJList.size()==0){
+                    if(Daoxian_data.guanCeJList.size()==0){
                         dis.setText("0");
                         dis.setVisibility(View.INVISIBLE);
                         disT.setVisibility(View.INVISIBLE);
@@ -136,12 +135,12 @@ public class Daoxian_stationActivity extends AppCompatActivity {
             stationList.add(station);
 
             //因为第一站不观测距离，所以第一站不用往disList中加观测值
-            if(Starting_data.guanCeJList.size()!=0){
-                Starting_data.disList.add(Double.parseDouble(dis.getText().toString()));
+            if(Daoxian_data.guanCeJList.size()!=0){
+                Daoxian_data.disList.add(Double.parseDouble(dis.getText().toString()));
             }
-            Starting_data.ceZhan.add(cezhan.getText().toString());
+            Daoxian_data.ceZhan.add(cezhan.getText().toString());
             //将各观测角放入数据类中，便于计算平差
-            Starting_data.guanCeJList.add(Caculate.DMStohudu(Integer.parseInt(du.getText().toString())
+            Daoxian_data.guanCeJList.add(Caculate.DMStohudu(Integer.parseInt(du.getText().toString())
                     ,Integer.parseInt(fen.getText().toString()),Integer.parseInt(miao.getText().toString())));
 
         }

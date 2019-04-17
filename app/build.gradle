@@ -50,5 +50,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.android.support:support-v4:26.0.0-alpha1'
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:design:26.0.0-alpha1'
-}
+    compile 'com.android.support:design:26.0.0-alpha1'//标题栏
+    compile 'org.litepal.android:core:1.4.1'//数据库包
+ }

@@ -13,70 +13,30 @@
         <!--Toolbar-->
         <include layout="@layout/activity_toolbar"
             android:id="@+id/toolbar_shuizhun" />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/shuizhun_ll"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp">
 
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/shuizhun_dengji">
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:text="水准等级:    "
-                        android:textSize="18sp" />
-                    <RadioButton
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shuizhun_4deng"
-                        android:text="    四等     "
-                        android:checked="true"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorBlack" />
-                    <RadioButton
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/shuizhun_2deng"
-                        android:text="    二等    "
-                        android:textSize="18sp"
-                        android:textColor="@color/colorBlack"/>
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="vertical"
-                android:layout_toRightOf="@+id/shuizhun_ll">
-                <TextView
-                    android:id="@+id/shuizhun_lastStation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="上一测站: "
-                    android:textSize="18sp"/>
-                <TextView
-                    android:id="@+id/shuizhun_leijicha"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="视距累积差: "
-                    android:textSize="18sp"/>
-            </LinearLayout>
-        </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/shuizhun_lastStation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="上一测站:     "
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/shuizhun_leijicha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="视距累积差:   0"
+            android:textSize="18sp"/>
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
@@ -115,7 +75,10 @@
                 android:id="@+id/shuizhun_K_hou"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.2"/>
+                android:layout_weight="1.2"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -125,7 +88,10 @@
                 android:id="@+id/shuizhun_K_qian"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.2"/>
+                android:layout_weight="1.2"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
         </LinearLayout>
 
         <View
@@ -156,7 +122,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:hint="(1)"/>
+                android:hint="(1)"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -167,7 +136,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:hint="(2)"/>
+                android:hint="(2)"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -178,7 +150,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:hint="(3)"/>
+                android:hint="(3)"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
 
         </LinearLayout>
 
@@ -204,7 +179,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:hint="(4)"/>
+                android:hint="(4)"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -215,7 +193,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:hint="(5)"/>
+                android:hint="(5)"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -226,7 +207,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:hint="(6)"/>
+                android:hint="(6)"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
 
         </LinearLayout>
 
@@ -244,7 +228,10 @@
                 android:id="@+id/shuizhun_qian_red_zhong"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:hint="(7)"/>
+                android:hint="(7)"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -260,7 +247,10 @@
                 android:id="@+id/shuizhun_hou_red_zhong"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:hint="(8)"/>
+                android:hint="(8)"
+                android:inputType="number"
+                android:digits="1234567890."
+                android:maxLines="1"/>
         </LinearLayout>
 
 

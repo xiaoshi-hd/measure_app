@@ -13,7 +13,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.miss.Caculate;
@@ -48,9 +47,9 @@ public class DaoxianActivity extends AppCompatActivity {
         super.onResume();
         //region 清空列表数据，防止返回首页再进入依旧保存有数据
         Log.i("Activity生命周期","OnResume方法调用");
-        Starting_data.ceZhan.clear();
-        Starting_data.disList.clear();
-        Starting_data.guanCeJList.clear();
+        Daoxian_data.ceZhan.clear();
+        Daoxian_data.disList.clear();
+        Daoxian_data.guanCeJList.clear();
         //endregion
     }
         @Override
@@ -96,9 +95,9 @@ public class DaoxianActivity extends AppCompatActivity {
         //endregion
 
         //region 清空列表数据，防止退出再进入依旧保存有数据
-        Starting_data.ceZhan.clear();
-        Starting_data.disList.clear();
-        Starting_data.guanCeJList.clear();
+        Daoxian_data.ceZhan.clear();
+        Daoxian_data.disList.clear();
+        Daoxian_data.guanCeJList.clear();
         //endregion
         //button的点击事件
         button.setOnClickListener(new View.OnClickListener() {
@@ -106,28 +105,28 @@ public class DaoxianActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //region 转向选择
                 if (left.isChecked()){
-                    Starting_data.k = 1;
+                    Daoxian_data.k = 1;
                 }
                 if (right.isChecked()){
-                    Starting_data.k = -1;
+                    Daoxian_data.k = -1;
                 }
                 //endregion
                 //region 数据导入
                 try {//运行try_catch时程序出现异常不会使程序崩溃
-                   Starting_data.fangwei_first = Caculate.DMStohudu(Integer.parseInt(du_first.getText().toString())
+                   Daoxian_data.fangwei_first = Caculate.DMStohudu(Integer.parseInt(du_first.getText().toString())
                             ,Integer.parseInt(fen_first.getText().toString()),Double.parseDouble(miao_first.getText().toString()));
-                    Starting_data.fangwei_end =Caculate.DMStohudu(Integer.parseInt(du_end.getText().toString())
+                    Daoxian_data.fangwei_end =Caculate.DMStohudu(Integer.parseInt(du_end.getText().toString())
                             ,Integer.parseInt(fen_end.getText().toString()),Double.parseDouble(miao_end.getText().toString()));
-                    Starting_data.B = new Starting_data.ZuoBiao(Double.parseDouble(BX.getText().toString())
+                    Daoxian_data.B = new Daoxian_data.ZuoBiao(Double.parseDouble(BX.getText().toString())
                             ,Double.parseDouble(BY.getText().toString()));
-                    Starting_data.C = new Starting_data.ZuoBiao(Double.parseDouble(CX.getText().toString())
+                    Daoxian_data.C = new Daoxian_data.ZuoBiao(Double.parseDouble(CX.getText().toString())
                             ,Double.parseDouble(CY.getText().toString()));
                 }
                 catch (Exception e) {
                     Toast.makeText(DaoxianActivity.this, "请正确填写全部数据", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                //Log.d("Activity生命周期", String.valueOf(Caculate.hudutodms(Starting_data.fangwei_first)));
+                //Log.d("Activity生命周期", String.valueOf(Caculate.hudutodms(Daoxian_data.fangwei_first)));
                 //endregion
                 Intent intent = new Intent(DaoxianActivity.this,Daoxian_stationActivity.class);
                 startActivity(intent);
