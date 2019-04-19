@@ -48,6 +48,7 @@ public class Shuizhun_setupActivity extends AppCompatActivity {
 
         Shuizhun_resultActivity.juli.clear();
         Shuizhun_resultActivity.gaocha.clear();
+        Shuizhun_resultActivity.cezhan.clear();
 
         Shuizhun_stationActivity.leijishiju = 0;
         Shuizhun_stationActivity.cezhan = "";
@@ -77,6 +78,7 @@ public class Shuizhun_setupActivity extends AppCompatActivity {
 
         Shuizhun_resultActivity.juli.clear();
         Shuizhun_resultActivity.gaocha.clear();
+        Shuizhun_resultActivity.cezhan.clear();
 
         Shuizhun_stationActivity.leijishiju = 0;
         Shuizhun_stationActivity.cezhan = "";

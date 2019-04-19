@@ -194,9 +194,15 @@ public class ShuizhunActivity extends AppCompatActivity {
                             heijianhong = gaocha_black - (gaocha_red - 0.1);
                     }
                     heijianhong = Caculate.Round(heijianhong * 1000,0);
-                    gaocha_avg = Caculate.Round((gaocha_black - houjianqian / 1000 / 2),3);
+                    gaocha_avg = Caculate.Round((gaocha_black - houjianqian / 1000 / 2),4);
                 }
                 //endregion
+                //endregion
+
+                //region 数据存储
+                Shuizhun_resultActivity.juli.add(Caculate.Round(houshiju + qianshiju,1));
+                Shuizhun_resultActivity.gaocha.add(gaocha_avg);
+                Shuizhun_resultActivity.cezhan.add(cezhan);
                 //endregion
                 Intent intent = new Intent(ShuizhunActivity.this,Shuizhun_stationActivity.class);
                 intent.putExtra("测站",cezhan);
@@ -205,7 +211,7 @@ public class ShuizhunActivity extends AppCompatActivity {
                 intent.putExtra("后视距",houshiju);
                 intent.putExtra("当前视差",shicha);
                 intent.putExtra("累积视差",leijicha);
-                Log.i("Activity生命周期1111111",String.valueOf(leijicha));
+
                 intent.putExtra("前黑红读差",qian_black_red);
                 intent.putExtra("后黑红读差",hou_black_red);
                 intent.putExtra("后减前",houjianqian);
@@ -215,6 +221,19 @@ public class ShuizhunActivity extends AppCompatActivity {
                 intent.putExtra("黑减红",heijianhong);
 
                 intent.putExtra("平均高差",gaocha_avg);
+
+                //用于数据合格后把数据传入数据库
+                intent.putExtra("K1",k1);
+                intent.putExtra("K2",k2);
+                intent.putExtra("hhs",hhs);
+                intent.putExtra("hhz",hhz);
+                intent.putExtra("hhx",hhx);
+                intent.putExtra("qhs",qhs);
+                intent.putExtra("qhz",qhz);
+                intent.putExtra("qhx",qhx);
+                intent.putExtra("qhongz",qhongz);
+                intent.putExtra("hhongz",hhongz);
+
                 startActivity(intent);//每次都会触发station的oncreate事件
             }
         });

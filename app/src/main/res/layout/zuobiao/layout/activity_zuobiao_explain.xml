@@ -15,9 +15,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        android:text="大地主题正算：\n\t\t\t\t已知椭球面上某一已知点的大地坐标（L1，B1）以及该已知点至未知点的大地线长(S12)和大地方位角（A12），求未知点大地坐标（L2，B2）和大地方位角（A21）\n\n
-大地主题反算：\n\t\t\t\t已知椭球面上两已知点的大地坐标（L1，B1，L2，B2），求该两点间的大地线长(S12)和正反大地方位角（A12，A21）\n\n
-\t\t\t\t本程序能实现大地主题正反算的计算。角度计算精度精度为0.001”,距离计算精度在0.15m以内，可以实现高精度的计算。"
+        android:text="说明文档"
         android:textSize="20sp"
         android:textColor="@color/colorBlack"
         android:layout_below="@+id/toolbar_zuobiao_explain"

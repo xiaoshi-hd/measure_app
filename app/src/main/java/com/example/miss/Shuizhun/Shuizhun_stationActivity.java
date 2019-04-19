@@ -193,6 +193,11 @@ public class Shuizhun_stationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 isnext = false;
+
+                Shuizhun_resultActivity.cezhan.remove( Shuizhun_resultActivity.cezhan.size() - 1);
+                Shuizhun_resultActivity.gaocha.remove( Shuizhun_resultActivity.gaocha.size() - 1);
+                Shuizhun_resultActivity.juli.remove( Shuizhun_resultActivity.juli.size() - 1);
+
                 //之后在返回的界面清空所有控件，可以在上个活动的onresume事件编写清空代码
                 finish();
             }
@@ -204,10 +209,27 @@ public class Shuizhun_stationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cezhan = intent.getStringExtra("测站");
-                Shuizhun_resultActivity.juli.add(Caculate.Round(intent.getDoubleExtra("后视距",0) + intent.getDoubleExtra("前视距",0),1));
-                Shuizhun_resultActivity.gaocha.add(intent.getDoubleExtra("平均高差",0));
+                leijishiju = Caculate.Round(intent.getDoubleExtra("累积视差",0),1);
+
+                //region 该实例对应ShuiZhunCeLiang表中的一条记录；
+                Shuizhun_data shuiZhunCeLiang = new Shuizhun_data();
+
+                shuiZhunCeLiang.setCezhan(intent.getStringExtra("测站"));
+                shuiZhunCeLiang.setK1(intent.getIntExtra("k1",0));
+                shuiZhunCeLiang.setK2(intent.getIntExtra("k2",0));
+                shuiZhunCeLiang.setHhs(intent.getIntExtra("hhs",0));
+                shuiZhunCeLiang.setHhz(intent.getIntExtra("hhz",0));
+                shuiZhunCeLiang.setHhx(intent.getIntExtra("hhx",0));
+                shuiZhunCeLiang.setQhs(intent.getIntExtra("qhs",0));
+                shuiZhunCeLiang.setQhz(intent.getIntExtra("qhz",0));
+                shuiZhunCeLiang.setQhx(intent.getIntExtra("qhx",0));
+                shuiZhunCeLiang.setHhongz(intent.getIntExtra("hhongz",0));
+                shuiZhunCeLiang.setQhongz(intent.getIntExtra("qhongz",0));
+                //将该条记录到数据库
+                shuiZhunCeLiang.save();
+                //endregion
+
                 Toast.makeText(Shuizhun_stationActivity.this, "数据已添加数据库", Toast.LENGTH_SHORT).show();
-                Log.i("Activity生命周期11111111",String.valueOf(leijishiju));
                 isnext = true;
                 finish();
             }

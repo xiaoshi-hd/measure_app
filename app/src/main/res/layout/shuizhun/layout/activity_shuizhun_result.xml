@@ -1,10 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!--Toolbar-->
-    <include layout="@layout/activity_toolbar"
-        android:id="@+id/toolbar_shuizhun_result" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Toolbar-->
+        <include layout="@layout/activity_toolbar"
+            android:id="@+id/toolbar_shuizhun_result" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/shuizhun_result_t0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="水准路线计算结果"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/toolbar_shuizhun_result"/>
+        <HorizontalScrollView
+            android:id="@+id/shuizhun_sv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/shuizhun_result_t0">
+            <TextView
+                android:id="@+id/shuizhun_result_t1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:textIsSelectable="true"/>
+        </HorizontalScrollView>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/shuizhun_sv1">
+            <TextView
+                android:id="@+id/shuizhun_result_t2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:textIsSelectable="true"/>
+        </HorizontalScrollView>
+    </RelativeLayout>
+</ScrollView>

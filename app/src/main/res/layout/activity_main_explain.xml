@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!--Toolbar-->
-    <include layout="@layout/activity_toolbar"
-        android:id="@+id/main_explain_toolbar" />
-</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Toolbar-->
+        <include layout="@layout/activity_toolbar"
+            android:id="@+id/main_explain_toolbar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="\t\t\t\t本程序基于Android Studio平台，采用Java编程语言进行开发，主要用于测量数据的处理。程序包括附合导线近似平差计算、附合水准路线近似平差计算、坐标转换、大地主题正反算、线路曲线要素计算等五个基础测量数据计算内容以及包括度分秒转换，方位角计算，坐标正反算等测量数据处理工具。\n\n
+ \t\t\t\t用户点击图标进入应用，右侧菜单是测量工具箱，可以点击图标进入或者右划拉出，主页面是五个测量程序的入口，点击对应的测量程序按钮进入相应的界面，每一个测量程序均可以实现数据的输入、检查、计算、输出等功能。\n"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
+</ScrollView>

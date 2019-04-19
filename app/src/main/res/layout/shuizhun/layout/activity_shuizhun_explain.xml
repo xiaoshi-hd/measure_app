@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!--Toolbar-->
-    <include layout="@layout/activity_toolbar"
-        android:id="@+id/toolbar_shuizhun_explain" />
-
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Toolbar-->
+        <include layout="@layout/activity_toolbar"
+            android:id="@+id/toolbar_shuizhun_explain" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="\t\t\t\t本程序能实现水准路线的测站检核和近似平差计算。\n\n
+\t\t\t\t用户在进入程序后选择水准测量的等级，输入已知起算数据，包括起点高程和终点高程。点击进行计算，之后可以对测站数据进行记录，包括测站名，尺常数，读数等。输入完成后，点击“计算”即可查看本站的数据检核，如果出现红色表示该数据超限，用户可以点击“重测”重新进行测量。若无超限数据，可以点击“迁至下一站”进行下一站的测量，本站数据会存储到数据库。\n\n
+\t\t\t\t测量完成后，点击“平差”即可以生成计算报告，包括水准路线的基本信息，限差信息，还有各测站的距离，高差，改正数,以及各点平差后的高程。\n\n"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"/>
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="\t\t\t\t四等限差：视线长度：<80m,视距差：<5m,累积视距差：<10m，红面分划与黑面分划的零点差：<3mm,红黑面高差之差：<5mm,往返测高差不符值或环线闭合差: < 20根号L\n\n
+\t\t\t\t二等限差：视线长度：<50m,视距差：<1m,累积视距差：<3m，基辅分划读数差：<0.4mm,基辅分划所测高差的差：<0.6mm,往返测高差不符值或环线闭合差: < 4根号L\n\n"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"/>
+            -->
+    </LinearLayout>
+</ScrollView>
