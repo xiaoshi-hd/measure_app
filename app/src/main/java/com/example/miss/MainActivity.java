@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import com.example.miss.Dadi.DadiActivity;
 import com.example.miss.Daoxian.DaoxianActivity;
-import com.example.miss.Shuizhun.ShuizhunActivity;
 import com.example.miss.Shuizhun.Shuizhun_setupActivity;
 import com.example.miss.Xianlu.XianluActivity;
 import com.example.miss.Zuobiao.ZuobiaoActivity;
@@ -50,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
     public boolean onOptionsItemSelected(MenuItem item) {//菜单选择事件
-        if (item.getItemId() == R.id.main_item){
-            Intent intent = new Intent(MainActivity.this,Main_exaplainActivity.class);
+        if (item.getItemId() == R.id.main_item1){
+            Intent intent = new Intent(MainActivity.this,Main_explainActivity.class);
             startActivity(intent);
         }
         return true;

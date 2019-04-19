@@ -42,11 +42,11 @@ public class ZuobiaoActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.zuobiao_item1){
-            Intent intent = new Intent(ZuobiaoActivity.this,Xianlu_explainActivity.class);
+            Intent intent = new Intent(ZuobiaoActivity.this,Zuobiao_explainActivity.class);
             startActivity(intent);
         }
         else if (item.getItemId() == R.id.zuobiao_item2){
-            Intent intent = new Intent(ZuobiaoActivity.this,Xianlu_exampleActivity.class);
+            Intent intent = new Intent(ZuobiaoActivity.this,Zuobiao_exampleActivity.class);
             startActivity(intent);
         }
         return true;

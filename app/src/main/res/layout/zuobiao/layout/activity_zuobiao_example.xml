@@ -34,30 +34,5 @@ A1  100.000033,   \t S  15000000.2\n
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:id="@+id/dadi_example_button_zheng" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="30dp"
-        android:text="反算示例数据：\n\n
-B1  35.000022,  \t L1  90.000011,\n\n
-B2  -30.292096,  \t L2  215.590434\n
-        "
-        android:textSize="20sp"
-        android:textColor="@color/colorBlack"
-        android:layout_below="@+id/dadi_example_button_zheng"
-        android:id="@+id/dadi_example_text_fan" />
-
-    <Button
-        android:text="使用反算示例数据"
-        android:textSize="30sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/dadi_example_text_fan"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/dadi_example_button_fan" />
 
 </RelativeLayout>

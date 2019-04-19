@@ -76,7 +76,7 @@
                         android:textSize="18sp"/>
                     <EditText
                         android:id="@+id/shuizhun_gaocheng_start"
-                        android:layout_width="60sp"
+                        android:layout_width="80sp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:layout_marginLeft="10dp"
@@ -100,7 +100,7 @@
                         android:textSize="18sp"/>
                     <EditText
                         android:id="@+id/shuizhun_gaocheng_end"
-                        android:layout_width="60sp"
+                        android:layout_width="80sp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:inputType="number"

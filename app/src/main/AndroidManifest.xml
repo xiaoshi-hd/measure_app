@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main_exaplainActivity" />
+        <activity android:name=".Main_explainActivity" />
 
         <activity android:name=".Daoxian.DaoxianActivity" />
         <activity android:name=".Daoxian.Daoxian_stationActivity" />

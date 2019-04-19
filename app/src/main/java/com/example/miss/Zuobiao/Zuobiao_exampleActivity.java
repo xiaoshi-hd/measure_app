@@ -17,7 +17,7 @@ public class Zuobiao_exampleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zuobiao_example);
 
-        Button button_zheng = (Button) findViewById(R.id.dadi_example_button_zheng);
+        /*Button button_zheng = (Button) findViewById(R.id.dadi_example_button_zheng);
         button_zheng.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -32,7 +32,7 @@ public class Zuobiao_exampleActivity extends AppCompatActivity {
                 example_fan = true;
                 finish();
             }
-        });
+        });*/
 
         //region 标题栏加返回箭头
         toolbar = (Toolbar)findViewById(R.id.toolbar_zuobiao_example);

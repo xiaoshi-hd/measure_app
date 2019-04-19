@@ -6,15 +6,15 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class Main_exaplainActivity extends AppCompatActivity {
+public class Main_explainActivity extends AppCompatActivity {
     private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_explain);
+        setContentView(R.layout.activity_main_explain1);
 
-        toolbar = (Toolbar)findViewById(R.id.main_explain_toolbar);
+        toolbar = (Toolbar)findViewById(R.id.main_explain1_toolbar);
         toolbar.setTitle("测量程序");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
