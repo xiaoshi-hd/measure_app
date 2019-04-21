@@ -12,7 +12,6 @@
         <item>直角XYZ->大地BLH</item>
         <item>大地BLH->高斯xyH</item>
         <item>高斯xyH->大地BLH</item>
-        <item>邻带换算</item>
     </string-array>
 
 </resources>

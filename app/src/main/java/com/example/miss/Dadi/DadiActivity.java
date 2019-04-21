@@ -187,7 +187,6 @@ public class DadiActivity extends AppCompatActivity {
                     e1 = 0.006694380022;
                     e2 = 0.006739496775;
                 }
-                Log.d("Activity生命周期",String.valueOf(a));
                 //endregion
 
                 //region 正算

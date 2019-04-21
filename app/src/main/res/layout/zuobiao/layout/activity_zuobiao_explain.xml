@@ -13,9 +13,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:text="说明文档"
+        android:text="本程序能实现测量时常用的单点坐标转换。\n\n1.由大地坐标计算大地空间直角坐标：\n\t\t\t\t已知某点的大地坐标（L，B，H），求该点相应的大地空间直角坐标（X，Y，Z）\n
+2.由大地空间直角坐标计算大地坐标：\n\t\t\t\t已知某点的大地空间直角坐标（X，Y，Z），求该点相应的大地坐标（L，B，H）\n
+3.高斯投影正算：\n\t\t\t\t已知椭球面上某点的大地坐标（L，B），求该点相应的高斯平面直角坐标（x，y）\n
+4.高斯投影反算：\n\t\t\t\t已知平面上某点的高斯平面直角坐标（x，y），求该点相应的椭球面上的大地坐标\n
+\t\t\t\t本程序角度计算精度精度为0.01”,距离计算精度在0.001m，可以实现高精度的转换。"
         android:textSize="20sp"
         android:textColor="@color/colorBlack"
         android:layout_below="@+id/toolbar_zuobiao_explain"

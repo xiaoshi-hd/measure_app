@@ -11,28 +11,44 @@ import com.example.miss.R;
 
 public class Zuobiao_exampleActivity extends AppCompatActivity {
     private Toolbar toolbar;
-    public static boolean example_zheng = false,example_fan = false;
+    public static boolean example_dadi_zhijiao = false,example_zhijiao_dadi = false;
+    public static boolean example_dadi_gaosi = false,example_gaosi_dadi = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zuobiao_example);
 
-        /*Button button_zheng = (Button) findViewById(R.id.dadi_example_button_zheng);
-        button_zheng.setOnClickListener(new View.OnClickListener(){
+        Button button_dadi_zhijiao = (Button) findViewById(R.id.zuobiao_example_text_dadi_zhijiao);
+        button_dadi_zhijiao.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                example_zheng = true;
+                example_dadi_zhijiao = true;
                 finish();
             }
         });
-        Button button_fan = (Button) findViewById(R.id.dadi_example_button_fan);
-        button_fan.setOnClickListener(new View.OnClickListener(){
+        Button button_zhijiao_dadi = (Button) findViewById(R.id.zuobiao_example_text_zhijiao_dadi);
+        button_zhijiao_dadi.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                example_fan = true;
+                example_zhijiao_dadi = true;
                 finish();
             }
-        });*/
+        });Button button_dadi_gaosi = (Button) findViewById(R.id.zuobiao_example_text_dadi_gaosi);
+        button_dadi_gaosi.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                example_dadi_gaosi = true;
+                finish();
+            }
+        });
+        Button button_gaosi_dadi = (Button) findViewById(R.id.zuobiao_example_text_gaosi_dadi);
+        button_gaosi_dadi.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                example_gaosi_dadi = true;
+                finish();
+            }
+        });
 
         //region 标题栏加返回箭头
         toolbar = (Toolbar)findViewById(R.id.toolbar_zuobiao_example);

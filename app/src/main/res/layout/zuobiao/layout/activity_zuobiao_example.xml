@@ -1,38 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_xianlu4"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.miss.Xianlu.Xianlu_exampleActivity">
-    <!--Toolbar-->
-    <include layout="@layout/activity_toolbar"
-        android:id="@+id/toolbar_zuobiao_example" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="30dp"
-        android:text="正算示例数据：\n\n
-B1  35.000022,   \t L1  90.000011,\n\n
-A1  100.000033,   \t S  15000000.2\n
-        "
-        android:textSize="20sp"
-        android:textColor="@color/colorBlack"
-        android:id="@+id/dadi_example_text_zheng"
-        android:layout_below="@+id/toolbar_zuobiao_example"/>
-
-    <Button
-        android:text="使用正算示例数据"
-        android:textSize="30sp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dadi_example_text_zheng"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/dadi_example_button_zheng" />
-
-</RelativeLayout>
+        android:orientation="vertical">
+        <!--Toolbar-->
+        <include layout="@layout/activity_toolbar"
+            android:id="@+id/toolbar_zuobiao_example" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大地转直角坐标示例数据：\n
+纬度B  33.4455666,   \t 经度L  77.1122333,\n
+大地高H  5555.66
+        "
+                android:textSize="18sp"
+                android:textColor="@color/colorBlack"/>
+            <Button
+                android:text="使用大地转直角坐标示例数据"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id = "@+id/zuobiao_example_text_dadi_zhijiao" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直角转大地坐标示例数据：\n
+X  1177888.777,   \t Y  5166777.888,\n
+Z  3544555.666
+        "
+                android:textSize="18sp"
+                android:textColor="@color/colorBlack"/>
+            <Button
+                android:text="使用直角转大地坐标示例数据"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id = "@+id/zuobiao_example_text_zhijiao_dadi" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大地转高斯坐标示例数据：\n
+纬度B  35.264038,   \t 经度L  115.085122,\n
+大地高H  100"
+                android:textSize="18sp"
+                android:textColor="@color/colorBlack"/>
+            <Button
+                android:text="使用大地转高斯坐标示例数据"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id ="@+id/zuobiao_example_text_dadi_gaosi" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高斯转大地坐标示例数据：\n
+高斯X  3354874.257,   \t 高斯Y  20500386.567,\n
+大地高H  100
+        "
+                android:textSize="18sp"
+                android:textColor="@color/colorBlack"/>
+            <Button
+                android:text="使用高斯转大地坐标示例数据"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id ="@+id/zuobiao_example_text_gaosi_dadi"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
