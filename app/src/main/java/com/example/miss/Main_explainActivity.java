@@ -12,9 +12,9 @@ public class Main_explainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_explain1);
+        setContentView(R.layout.activity_main_explain);
 
-        toolbar = (Toolbar)findViewById(R.id.main_explain1_toolbar);
+        toolbar = (Toolbar)findViewById(R.id.main_explain_toolbar);
         toolbar.setTitle("测量程序");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);

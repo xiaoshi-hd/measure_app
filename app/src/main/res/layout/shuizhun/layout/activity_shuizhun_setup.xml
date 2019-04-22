@@ -42,7 +42,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/shuizhun_4deng"
-                        android:text="    四等     "
+                        android:text=" 四等  "
                         android:checked="true"
                         android:textSize="18sp"
                         android:textColor="@color/colorBlack" />
@@ -51,7 +51,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/shuizhun_2deng"
                         android:layout_marginTop="9dp"
-                        android:text="    二等    "
+                        android:text=" 二等  "
                         android:textSize="18sp"
                         android:textColor="@color/colorBlack"/>
                 </RadioGroup>

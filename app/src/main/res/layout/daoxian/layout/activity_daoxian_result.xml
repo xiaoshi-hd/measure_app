@@ -4,27 +4,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.miss.Daoxian.Daoxian_resultActivity">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
         <!--Toolbar-->
         <include layout="@layout/activity_toolbar"
             android:id="@+id/toolbar_daoxian_result" />
-
         <TextView
-            android:id="@+id/daoxian_result_text"
+            android:id="@+id/daoxian_result_t0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20sp"
-            android:text="数据无效！！！"
-            android:layout_gravity="center"
-            android:textIsSelectable="true"
+            android:layout_marginTop="10dp"
+            android:text="附和导线平差计算结果"
+            android:textSize="25sp"
             android:textColor="@color/colorBlack"
-            android:layout_below="@+id/toolbar_daoxian_result" />
-    </LinearLayout>
-
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/toolbar_daoxian_result"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_below="@id/daoxian_result_t0">
+            <TextView
+                android:id="@+id/daoxian_result_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:text="\n                       数据无效！！！"
+                android:textIsSelectable="true"
+                android:textColor="@color/colorBlack" />
+        </HorizontalScrollView>
+    </RelativeLayout>
 </ScrollView>

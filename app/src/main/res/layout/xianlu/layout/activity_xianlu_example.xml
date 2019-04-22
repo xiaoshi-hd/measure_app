@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_xianlu4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.miss.Xianlu.Xianlu_exampleActivity">
-    <!--Toolbar-->
-    <include layout="@layout/activity_toolbar"
-        android:id="@+id/toolbar_xianlu_example" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Toolbar-->
+        <include layout="@layout/activity_toolbar"
+            android:id="@+id/toolbar_xianlu_example" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        android:text="交点数据：\n
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="交点数据：\n
 桩号,  X坐标,  Y坐标\n
 3628.633,  4041133.369,  495595.535\n\n
 前缓直点数据：\n
@@ -28,20 +31,21 @@
 左桩距,  右桩距\n
 12.25,  12.25\n
 "
-        android:textSize="20sp"
-        android:textColor="@color/colorBlack"
-        android:id="@+id/xianlu4_text"
-        android:layout_below="@+id/toolbar_xianlu_example"/>
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/xianlu4_text"
+            android:layout_below="@+id/toolbar_xianlu_example"/>
 
-    <Button
-        android:text="使用示例数据"
-        android:textSize="30sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/xianlu4_text"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/xianlu4_button" />
-
-</RelativeLayout>
+        <Button
+            android:text="使用示例数据"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xianlu4_text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/xianlu4_button" />
+    </RelativeLayout>
+</ScrollView>

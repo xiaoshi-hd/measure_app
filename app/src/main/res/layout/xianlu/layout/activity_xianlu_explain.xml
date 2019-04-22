@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_xianlu3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.miss.Xianlu.Xianlu_explainActivity">
-    <!--Toolbar-->
-    <include layout="@layout/activity_toolbar"
-        android:id="@+id/toolbar_xianlu_explain" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:text="\t\t\t\t本程序能计算基本道路曲线的曲线要素和中桩及边桩的测设数据。\n\n
-\t\t\t\t通过缓和曲线长控制曲线类型，当Ls1 = Ls2 = 0时，为圆曲线，当Ls1 = Ls2 = Ls时，是对称的缓和曲线，当Ls1 != Ls2时，为不对称的缓和曲线。通过前缓直里程和交点里程控制直线段的长度。最后能实现各种道路曲线类型的计算。计算结果可以复制粘贴,方便数据的导出。"
-        android:textSize="20sp"
-        android:textColor="@color/colorBlack"
-        android:layout_below="@+id/toolbar_xianlu_explain"
-        android:id="@+id/xianlu3_text" />
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Toolbar-->
+        <include layout="@layout/activity_toolbar"
+            android:id="@+id/toolbar_xianlu_explain" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:text="\t\t\t\t本程序能计算基本道路曲线的曲线要素和中桩及边桩的测设数据。\n\n
+\t\t\t\t通过缓和曲线长控制曲线类型，当Ls1 = Ls2 = 0时，为圆曲线，当Ls1 = Ls2 = Ls时，是对称的缓和曲线，当Ls1 != Ls2时，为不对称的缓和曲线。通过前缓直里程和交点里程控制直线段的长度。最后能实现各种道路曲线类型的计算。计算结果可以复制粘贴,方便数据的导出。\n\n"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"
+            android:layout_below="@+id/toolbar_xianlu_explain"
+            android:id="@+id/xianlu3_text" />
+    </RelativeLayout>
+</ScrollView>

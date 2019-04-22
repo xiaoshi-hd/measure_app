@@ -20,7 +20,7 @@
             android:text="测站："/>
         <EditText
             android:id="@+id/daoxian_cezhan"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:maxLines="1"/>
     </LinearLayout>

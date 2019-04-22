@@ -102,7 +102,7 @@ Z  3544555.666
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id ="@+id/zuobiao_example_text_gaosi_dadi"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="30dp"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

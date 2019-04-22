@@ -63,6 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginRight="20dp"
         android:layout_toRightOf="@+id/dadi_ll_choose"
         android:layout_below="@+id/toolbar_dadi">
 
@@ -205,7 +206,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="20dp"
         android:layout_below="@+id/dadi_ll_tuoqiu"
         android:layout_toRightOf="@+id/dadi_rl1">
         <TextView
@@ -275,6 +276,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
         android:text="计算"
         android:textSize="25dp"
         android:background="@drawable/s_bt1"/>
