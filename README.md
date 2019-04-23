@@ -18,7 +18,7 @@ measure_app
 
 |主界面|侧滑界面|
 |---|---
-|<img src="Screenshot/主界面.png" width=100%" height="60%"/>|<img src="Screenshot/测量工具箱.png" width10%" height="60%"/>|
+|<img src="Screenshot/主界面.png" width"100%" height="60%"/>|<img src="Screenshot/测量工具箱.png" widt"100%" height="60%"/>|
 
 
 #### 2.测量工具箱
