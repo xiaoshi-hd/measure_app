@@ -18,7 +18,7 @@ measure_app
 
 |主界面|侧滑界面|
 |---|---
-|<div align=center>![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")|<img src="Screenshot/测量工具箱.png" width="80%" height="50%"/>|
+|<div align=center>![主界面](Screenshot/主界面.png)|<div align=center>![测量工具箱](Screenshot/测量工具箱.png|
 
 
 #### 2.测量工具箱
