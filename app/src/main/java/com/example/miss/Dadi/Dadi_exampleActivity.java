@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.example.miss.R;
 
 public class Dadi_exampleActivity extends AppCompatActivity {
-    private Toolbar toolbar;
+    private Toolbar toolbar;/////
     public static boolean example_zheng = false,example_fan = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
