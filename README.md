@@ -18,12 +18,12 @@ measure_app
 
 |主界面|侧滑界面|
 |---|---
-|<img src="Screenshot/主界面.png" width="80" height="100%"/>|<img src="Screenshot/测量工具箱.png" width="100%" height="60%"/>|
+|<img src="Screenshot/主界面.png" width="80" height="50%" div align=center/>|<img src="Screenshot/测量工具箱.png" width="80%" height="50%"/>|
 
 
 #### 2.测量工具箱
 
-<img src="Screenshot/方位角计算.png" width="40%" height="30%"/>
+<img src="Screenshot/方位角计算.png" width="40%" height="30%" div align=center/>
 
 #### 3.五个测量程序
 ---------------------------
