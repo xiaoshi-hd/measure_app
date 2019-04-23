@@ -23,7 +23,7 @@ measure_app
 
 #### 2.测量工具箱
 
-<img src="Screenshot/方位角计算.png" width="40%" height="30%"/><img src="Screenshot/主界面.png" width="40" height="30%/>
+<img src="Screenshot/方位角计算.png" width="40%" height="30%"/><img src="Screenshot/主界面.png" width="40" height="30%"/>
 
 #### 3.五个测量程序
 ---------------------------
