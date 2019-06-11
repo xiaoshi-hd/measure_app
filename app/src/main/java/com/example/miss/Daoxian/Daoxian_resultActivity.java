@@ -21,7 +21,7 @@ public class Daoxian_resultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_daoxian_result);
         //region 标题栏加返回箭头
         toolbar = (Toolbar)findViewById(R.id.toolbar_daoxian_result);
-        toolbar.setTitle("附和导线近似平差计算");//设置Toolbar标题
+        toolbar.setTitle("附合导线近似平差计算");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
 

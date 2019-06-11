@@ -18,9 +18,6 @@ import android.widget.Toast;
 
 import com.example.miss.Caculate;
 import com.example.miss.R;
-import com.example.miss.Xianlu.XianluActivity;
-import com.example.miss.Xianlu.Xianlu_exampleActivity;
-import com.example.miss.Xianlu.Xianlu_explainActivity;
 
 public class DadiActivity extends AppCompatActivity {
 

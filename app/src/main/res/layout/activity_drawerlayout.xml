@@ -34,7 +34,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="线路曲线"
+                android:text="线路曲线计算"
                 android:textColor="@color/colorBlack"
                 android:textSize="20sp"
                 android:id="@+id/main_b_xianlu"
@@ -68,7 +68,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="水准计算"
+                android:text="水准路线计算"
                 android:textColor="@color/colorBlack"
                 android:textSize="20sp"
                 android:id="@+id/main_b_shuizhun"
@@ -80,7 +80,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="导线计算"
+                android:text="附合导线计算"
                 android:textColor="@color/colorBlack"
                 android:textSize="20sp"
                 android:id="@+id/main_b_daoxian"

@@ -152,7 +152,7 @@ public class XianluActivity extends AppCompatActivity {
             mqhz_X.setText(String.valueOf(4040357.574));
             mqhz_Y.setText(String.valueOf(495491.689));
             mjd_zhuanghao.setText(String.valueOf(3628.633));
-            mjd_X.setText(String.valueOf(4041133.369));
+            mjd_X.setText(String.valueOf(40 41133.369));
             mjd_Y.setText(String.valueOf(495595.535));
             mzhuangju.setText(String.valueOf(10));
             mbanjing.setText(String.valueOf(1100));

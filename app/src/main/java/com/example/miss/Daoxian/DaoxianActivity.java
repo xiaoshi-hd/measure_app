@@ -60,7 +60,7 @@ public class DaoxianActivity extends AppCompatActivity {
 
         //region 标题栏
         toolbar = (Toolbar)findViewById(R.id.toolbar_daoxian);
-        toolbar.setTitle("附和导线近似平差计算");//设置Toolbar标题
+        toolbar.setTitle("附合导线近似平差计算");//设置Toolbar标题
         toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
         setSupportActionBar(toolbar);
 
